@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    align-content: center;
+}
+
+nav {
+    background-color: rgb(202, 106, 17);
+    margin: 0px;
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+}
+
+nav > img {
+    width: 23%;
+    padding: 1%;
+}
+
+canvas {
+    margin: 20px 10px;
+}
+
+form {
+    padding: 20px 20px;
+    display: none;
+}
+
+form > select {
+    padding: 5px 5px;
+    line-height: 10px;
+    margin: 5px 5px;
+    justify-content: left;
+}
+
+#panelContour {
+    fill:#00ff00;
+}
+
+#damageContour {
+                fill:#ff0000;
+}
