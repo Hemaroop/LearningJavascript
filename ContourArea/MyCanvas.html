@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Hemaroop Inupakutika">
+        <meta name="description" content="Canvas Experiment">
+        <title>My Canvas Experiment</title> 
+        <style>
+            body {
+                text-align: center;
+                align-content: center;
+            }
+            nav {
+                background-color: rgb(202, 106, 17);
+                margin: 0px;
+                padding: 10px 10px;
+                display: flex;
+                flex-wrap: wrap;
+                overflow: hidden;
+                justify-content: space-around;
+            }
+            nav > img {
+                width: 23%;
+                padding: 1%;
+            }
+            canvas {
+                margin: 20px 10px;
+            }
+            form {
+                padding: 20px 20px;
+                display: none;
+            }
+            form > select {
+                padding: 5px 5px;
+                line-height: 10px;
+                margin: 5px 5px;
+                justify-content: left;
+            }
+            #panelContour {
+                fill:#00ff00;
+            }
+            #damageContour {
+                fill:#ff0000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <img id="car1" class="carImage" src="23001809581600000001_Crash Photos_2.jpeg" width="400" onload="myTestFunc()">
+            <img id="car2" class="carImage" src="23001809581600000001_Crash Photos_3.jpeg" width="400">
+            <img id="car3" class="carImage" src="23001809581600000001_Crash Photos_4.jpeg" width="400">
+            <img id="car4" class="carImage" src="23001809581600000001_Crash Photos_8.jpeg" width="400">
+            <img id="car5" class="carImage" src="CrashUK1.png" width="400">
+        </nav>
+        <canvas id="selectedCarImage"></canvas>
+        <br><button id="panelContour" type="button" disabled>Draw Panel Contour</button>
+        <button id="damageContour" type="button" disabled>Draw Damage Contour</button>
+        <br><form id="panelDamageDetailsForm">
+            Panel Name:<select id="panelName" title="Select panel name" disabled>
+                <option value="none" selected>Select</option>
+                <option value="Hood">Hood</option>
+                <option value="Roof">Roof</option>
+                <option value="Tailgate">Tailgate</option>
+                <option value="Grille">Grille</option>
+                <option value="Windscreen">Windscreen</option>
+                <option value="Rear Windscreen">Rear Windscreen</option>
+                <option value="Front Bumper">Front Bumper</option>
+                <option value="Rear Bumper">Rear Bumper</option>
+                <option value="Front Bumper Moulding">Front Bumper Moulding</option>
+                <option value="Rear Bumper Moulding">Rear Bumper Moulding</option>
+                <option value="Left Headlight">Left Headlight</option>
+                <option value="Right Headlight">Right Headlight</option>
+                <option value="Left Taillight">Left Taillight</option>
+                <option value="Right Taillight">Right Taillight</option>
+                <option value="Left Front Fender">Left Front Fender</option>
+                <option value="Right Front Fender">Right Front Fender</option>
+                <option value="Left Wing">Left Wing</option>
+                <option value="Right Wing">Right Wing</option>
+                <option value="Left Side Mirror">Left Side Mirror</option>
+                <option value="Right Side Mirror">Right Side Mirror</option>
+                <option value="Left Front Foglight">Left Front Foglight</option>
+                <option value="Right Front Foglight">Right Front Foglight</option>                
+                <option value="Left Front Door">Left Front Door</option>
+                <option value="Right Front Door">Right Front Door</option>
+                <option value="Left Rear Door">Left Rear Door</option>
+                <option value="Right Rear Door">Right Rear Door</option>
+                <option value="Left Front Door Window">Left Front Door Window</option>
+                <option value="Right Front Door Window">Right Front Door Window</option>
+                <option value="Left Rear Door Window">Left Rear Door Window</option>
+                <option value="Right Rear Door Window">Right Rear Door Window</option>
+                <option value="Left Front Door Moulding">Left Front Door Moulding</option>
+                <option value="Right Front Door Moulding">Right Front Door Moulding</option>
+                <option value="Left Rear Door Moulding">Left Rear Door Moulding</option>
+                <option value="Right Rear Door Moulding">Right Rear Door Moulding</option>
+                <option value="Left Front Wheel">Left Front Wheel</option>
+                <option value="Right Front Wheel">Right Front Wheel</option>
+                <option value="Left Rear Wheel">Left Rear Wheel</option>
+                <option value="Right Rear Wheel">Right Rear Wheel</option>
+            </select>
+            <br>Damage Type:<select id="damageType" onchange="selectionChangeEventHandler" title="Select damage type" disabled>
+                <option value="none" selected>Select</option>
+                <option value="Crack">Crack</option>
+                <option value="Stone Chip">Stone Chip</option>
+                <option value="Glass Damage">Glass Damage</option>
+                <option value="Dent">Dent</option>
+                <option value="Scratch">Scratch</option>
+                <option value="Missing">Missing</option>
+            </select>
+            <br><input type="button" value="Save" id="detailsSubmit" disabled>
+        </form>
+        <br><p id="damageResult"></p>
+        <br><ol id="imageDamageList"></ol>
+
+        <script rel="script" type="text/javascript" src="MyCanvas.js"></script>
+    </body>
+</html>
