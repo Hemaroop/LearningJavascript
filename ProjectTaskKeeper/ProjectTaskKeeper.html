@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Hemaroop Inupakutika">
+        <title>Task Keeper</title>
+        <!--link rel="icon" href="data:;base64,iVBORw0KGgo="-->
+        <link rel="stylesheet" type="text/css" href="ProjectTaskKeeper.css">
+        <script rel="script" type="text/javascript" src="ProjectTaskKeeper.js"></script>
+    </head>
+
+    <body>
+        <h1>Task Keeper</h1>
+        <h2>Your personal to-do list tracker</h2>
+        <h3 hidden>Loading...</h3>
+        <!--Landing Page Div-->
+        <div id="landingPage" class="inactiveDiv">
+            <button type="submit" id="lPSignUp" title="Sign Up" onclick="goToSignUpPage()">Sign Up</button>
+            <button type="submit" id="lPLogIn" title="Log In" onclick="goToLogInPage()">Log In</button>
+        </div>
+        <!--Sign Up Page Div-->
+        <div id="signUpPage" class="inactiveDiv">
+            <p id="signUpErrorMsg" class="errorMsg" hidden></p>
+            <form id="signUpForm">
+                <label for="firstName">First Name<sup class="requiredField">*</sup>:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" size="30" maxlength="50"> <br> <br>
+                <label for="lastName">Last Name<sup class="requiredField">*</sup>:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" size="30" maxlength="50"> <br> <br>
+                <label for="eMail">E-Mail<sup class="requiredField">*</sup>:</label>
+                <input type="email" id="eMail" name="eMail" placeholder="Enter your email address" size="30"> <br> <br>
+                <label for="psswd">Password<sup class="requiredField">*</sup>:</label>
+                <input type="password" id="signUpPsswd" name="Password" placeholder="Enter your password (min. 8 characters)" size="30"> <br> <br>
+                <input type="checkbox" id="agreeBox" name="Acceptance"> <p id="agreeText">I agree to the <a>Terms Of Use</a><sup class="requiredField">*</sup></p> <br> <br>
+            </form>
+            <button id="submitSignUpForm">Sign Up</button>
+        </div>
+        <!--Log In Page Div-->
+        <div id="logInPage" class="inactiveDiv">
+            <p id="logInErrorMsg" class="errorMsg" hidden></p>
+            <form id="logInForm">
+                <label for="eMail">Username<sup class="requiredField">*</sup>:</label>
+                <input type="email" id="username" name="userName" placeholder="Enter your email address" size="30"> <br> <br>
+                <label for="psswd">Password<sup class="requiredField">*</sup>:</label>
+                <input type="password" id="logInPsswd" name="LogInPassword" placeholder="Enter your password" size="30" minlength="8"> <br> <br>
+            </form>
+            <button id="submitLogInForm">Log In</button>
+        </div>
+        <!--Dashboard Div-->
+        <div id="dashboard" class="inactiveDiv">
+            <div id="listAdder">
+                <svg viewBox="0 0 72 72">
+                    <path d="M36.493 72C16.118 72 0 55.883 0 36.493 0 16.118 16.118 0 36.493 0 55.882 0 72 16.118 72 36.493 72 55.882 55.883 72 36.493 72zM34 34h-9c-.553 0-1 .452-1 1.01v1.98A1 1 0 0 0 25 38h9v9c0 .553.452 1 1.01 1h1.98A1 1 0 0 0 38 47v-9h9c.553 0 1-.452 1-1.01v-1.98A1 1 0 0 0 47 34h-9v-9c0-.553-.452-1-1.01-1h-1.98A1 1 0 0 0 34 25v9z" fill="#409fff" fill-rule="non-zero"></path>
+                </svg> 
+                <h2>Create a new to-do list</h2>
+            </div>
+            <ol id="ListOfLists">
+
+            </ol>
+        </div>  
+
+    </body>
+
+</html>

@@ -1,0 +1,58 @@
+body {
+    align-content: center;
+    text-align: center;
+    background-color: burlywood;
+}
+
+h1 {
+    color: darkolivegreen;
+}
+
+h2 {
+    color: gray;
+}
+
+.activeDiv {
+    visibility: visible;
+    display: block;
+}
+
+.inactiveDiv {
+    visibility: hidden;
+    display: none;
+}
+
+label {
+    box-sizing: border-box;
+    width: 110px;
+    text-align: left;
+    display:inline-block;
+}
+
+#agreeBox, #agreeText {
+    box-sizing: border-box;
+    display:inline-block;
+}
+
+.errorMsg{
+    color: red;
+    font-size: 20px;
+}
+
+.requiredField {
+    color: red;
+    font-size: 10px;
+}
+
+#listAdder > svg {
+    height: 2.25em;
+    width: 2.25em;
+    box-sizing: border-box;
+    display:inline-block;
+}
+
+#listAdder > h2 {
+    transform: translateY(-30%);
+    box-sizing: border-box;
+    display:inline-block;
+}
