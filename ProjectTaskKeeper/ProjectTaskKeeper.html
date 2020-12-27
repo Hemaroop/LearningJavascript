@@ -13,8 +13,12 @@
 
     <body>
         <h1>Task Keeper</h1>
+        <div id="userButtons" class="activeAfterLogin">
+            <img id="userSettings" src="settings-svgrepo-com.svg" alt="Account Settings" title="Account Settings"/> 
+            <img id="userLogout" src="logout-svgrepo-com.svg" alt="Logout" title="Logout"/>
+        </div>
         <h2>Your personal to-do list tracker</h2>
-        <h3 hidden>Loading...</h3>
+        <h3 id="loadingMessage" hidden>Loading...</h3>
         <!--Landing Page Div-->
         <div id="landingPage" class="inactiveDiv">
             <button type="submit" id="lPSignUp" title="Sign Up" onclick="goToSignUpPage()">Sign Up</button>
@@ -58,7 +62,23 @@
             <ol id="ListOfLists">
 
             </ol>
-        </div>  
+        </div>
+        <!--Account Settings Page-->
+        <div id="accSettingsPage" class="inactiveDiv">
+            <p id="settingsErrorMsg" class="errorMsg" hidden></p>
+            <form id="settingsForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="accFirstName" name="firstName" placeholder="First Name" size="30" maxlength="50"> <br> <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="accLastName" name="lastName" placeholder="Last Name" size="30" maxlength="50"> <br> <br>
+                <label for="eMail">E-Mail<sup class="requiredField">*</sup>:</label>
+                <input type="email" id="accEMail" name="eMail" placeholder="Enter your email address" size="30"> <br> <br>
+                <label for="psswd">Password<sup class="requiredField">*</sup>:</label>
+                <input type="password" id="accPsswd" name="Password" placeholder="Enter your password (min. 8 characters)" size="30"> <br> <br>
+            </form>
+            <button id="submitAccSettingsForm">Save Changes</button>
+            <button id="backToDashboard">Back</button>
+        </div>
 
     </body>
 

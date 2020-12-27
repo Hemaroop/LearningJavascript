@@ -1,20 +1,43 @@
 body {
-    align-content: center;
-    text-align: center;
+    align-content: left;
+    text-align: left;
     background-color: burlywood;
 }
 
 h1 {
     color: darkolivegreen;
+    width: 88%;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 h2 {
     color: gray;
+    margin-top: 5px;
+}
+
+#loadingMessage {
+    text-align: center;
+}
+
+#userButtons {
+    margin: 10px 10px;
+    width: 10%;
+}
+
+#userButtons > img {
+    height: 2.5em;
+    width: 2.5em;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .activeDiv {
     visibility: visible;
     display: block;
+    text-align: center;
 }
 
 .inactiveDiv {
