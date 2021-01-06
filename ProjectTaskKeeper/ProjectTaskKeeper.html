@@ -59,9 +59,25 @@
                 </svg> 
                 <h2>Create a new to-do list</h2>
             </div>
-            <ol id="ListOfLists">
-
+            <ol id="listOfLists">
             </ol>
+        </div>
+        <!--New or Selected List Div-->
+        <div id="selectedList" class="inactiveDiv">
+            <p id="titleErrorMsg" class="errorMsg" hidden></p>
+            <h3 id="listTitle"></h3>
+            <form id="titleForm">
+                <input type="text" id="titleInput" class="lTitle" placeholder="Add or edit your list title">
+                <input type="button" id="saveTitle" class="lTitle">
+            </form>
+            <ol id="listElements">
+            </ol>
+            <form id="itemForm">
+                <input type="text" id="listInput" class="listElement" placeholder="Add a new element to your list">
+                <input type="button" id="addToList" class="listElement" value="Add">
+            </form>
+            <button id="saveList">Save Changes</button>
+            <button id="goToDashboard">Back</button>
         </div>
         <!--Account Settings Page-->
         <div id="accSettingsPage" class="inactiveDiv">

@@ -79,3 +79,8 @@ label {
     box-sizing: border-box;
     display:inline-block;
 }
+
+.lTitle,.listElement {
+    box-sizing: border-box;
+    display: inline-block;
+}
